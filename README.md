@@ -1,8 +1,14 @@
-## The Outcome: Protein Similarity Search
+## Protein Similarity Search
 
 
 ![Protein Similarity Search Schema](./assets/Protein_Similarity_Search_Schema.png)
+
+## Vector Embeddings
+
 ![Protein Similarity Search Design](./assets/Protein_Similarity_Search_Schema_2.png)
+
+## ProtT5
+
 ![ProtT5](./assets/Protein_Similarity_Search_Schema_3.png)
 
 Similarity search was able to extract the structurally/functionally similar proteins.
@@ -13,6 +19,8 @@ Similarity search was able to extract the structurally/functionally similar prot
 | **Name**  | Neurotoxin Oh9-1 | Exactin | Mambalgin-2 |
 | **Organism** | King Cobra | Sepedon haemachatus | Black Mamba |
 | **Function** | This toxin binds and inhibits rat muscle Toxin activity | Anticoagulant protein that prevents the activation of factor X (F10). It acts by potently inhibiting the extrinsic tenase complex. | This three-finger toxin inhibits ASIC channels. It acts as a gating modifier toxin by decreasing the apparent proton sensitivity of activation and by slightly increasing the apparent proton sensitivity for inactivation. |
+
+## Protein Similarity Visualization
 
 ![Protein Similarity Search](./assets/Protein_Similarity_Search.png)
 
