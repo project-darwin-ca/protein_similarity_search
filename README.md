@@ -2,8 +2,8 @@
 
 
 ![Protein Similarity Search Schema](./assets/Protein_Similarity_Search_Schema.png)
-![Protein Similarity Search Design](./assets/Protein_Similarity_Search_Schema2.png)
-![ProtT5](./assets/Protein_Similarity_Search_Schema3.png)
+![Protein Similarity Search Design](./assets/Protein_Similarity_Search_Schema_2.png)
+![ProtT5](./assets/Protein_Similarity_Search_Schema_3.png)
 
 Similarity search was able to extract the structurally/functionally similar proteins.
 
