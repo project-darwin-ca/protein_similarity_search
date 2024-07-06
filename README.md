@@ -10,5 +10,7 @@ Similarity search was able to extract the structurally/functionally similar prot
 | **Organism** | King Cobra | Sepedon haemachatus | Black Mamba |
 | **Function** | This toxin binds and inhibits rat muscle Toxin activity | Anticoagulant protein that prevents the activation of factor X (F10). It acts by potently inhibiting the extrinsic tenase complex. | This three-finger toxin inhibits ASIC channels. It acts as a gating modifier toxin by decreasing the apparent proton sensitivity of activation and by slightly increasing the apparent proton sensitivity for inactivation. |
 
+
+
 ![Protein Similarity Search](./assets/Protein_Similarity_Search.png)
 
