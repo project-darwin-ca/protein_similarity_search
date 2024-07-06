@@ -16,5 +16,5 @@ Similarity search was able to extract the structurally/functionally similar prot
 | Matching Protein | UniProtID  | Organism            | Function |
 |------------------|------------|---------------------|----------|
 | P56424           | P53_MACMU  | Macaca mulatta      | Acts as a tumor suppressor in many tumor types; induces growth arrest or apoptosis depending on the physiological circumstances and cell type. Involved in cell cycle regulation as a trans-activator that acts to negatively regulate cell division by controlling a set of genes required for this process. |
-| Q9TTA1           | P53_TUPBE  | Tupaia belangeri    |          |
-| P56423           | P53_MACFA  | Macaca fascicularis |          |
+| Q9TTA1           | P53_TUPBE  | Tupaia belangeri    | Acts as a tumor suppressor in many tumor types; induces growth arrest or apoptosis depending on the physiological circumstances and cell type. Involved in cell cycle regulation as a trans-activator that acts to negatively regulate cell division by controlling a set of genes required for this process. |
+| P56423           | P53_MACFA  | Macaca fascicularis | Acts as a tumor suppressor in many tumor types; induces growth arrest or apoptosis depending on the physiological circumstances and cell type. Involved in cell cycle regulation as a trans-activator that acts to negatively regulate cell division by controlling a set of genes required for this process. |
