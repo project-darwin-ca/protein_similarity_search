@@ -91,6 +91,72 @@ def get_function(seq):
 st.sidebar.title('Show Similar Proteins')
 protein = st.sidebar.text_input('Input a protein to match 3 different proteins based on the ProtT5 embeddings:')
 try:
+    uniprotid = protein_dict.get(protein)
+    info0 = get_desc(uniprotid)
+    desc = get_function(protein)
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write(f"Base Protein: **{uniprotid}**")
+        viz(uniprotid, 'white')
+    with col2:
+        st.write(f"**UniProtId:** {info0[0]}")
+        st.write(f"**Organism:** {info0[1]}")
+        st.text_area(label = '**Sequence:**', value = protein)
+        st.text_area(label = '**Function:**', value = desc)
+
+        # Find similar proteins of the selected protein
+    df = session.sql(f"""
+                        SELECT
+                            UNIPROTID,
+                            VECTOR_L2_DISTANCE(EMB,(SELECT EMB FROM BIONEMO_DB.PUBLIC.PROTEINS WHERE UNIPROTID = '{uniprotid}')::VECTOR(FLOAT,1024)) AS DISTANCE,
+                            EMB
+                        FROM BIONEMO_DB.PUBLIC.PROTEINS
+                        ORDER BY DISTANCE ASC
+                        LIMIT 4""")
+    similar_protein_list = df.select(col('UNIPROTID')).to_pandas().values.tolist()
+    similar_protein_list_all = [x for xs in similar_protein_list for x in xs]
+
+    # Visualize similar proteins
+    cols = st.columns(3)
+    j = 0
+    for i in similar_protein_list_all:
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
