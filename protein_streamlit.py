@@ -121,7 +121,15 @@ try:
     cols = st.columns(3)
     j = 0
     for i in similar_protein_list_all:
-      
+        if i not in protein_list:
+            info = get_desc(i)
+            with cols[j%3]:
+              st.write(f"**Matching Protein**: {i}")
+              st.write(f"**UniProtId**: {info[0]}")
+              st.write(f"**Organism**: {info[1]}")
+              st.text_area(label = '**Function:**', value = info[2][24:], key = i)
+              viz(1, 'white')
+        j += 1
 
 
 
