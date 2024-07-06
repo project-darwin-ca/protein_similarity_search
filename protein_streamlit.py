@@ -74,10 +74,17 @@ def viz(id, bck):
     xyzview.spin(True)
     xyzview.zoomTo()
     xyzview.animate({'loop': "forward"})
-    showmol(xyzview height=350 width=400)
+    showmol(xyzview, height=350, width=400)
 
 # Get protein function
-
+def get_function(seq):
+    df = session.sql(f"""
+                    SELECT
+                          FUNCTION
+                    FROM BIONEMO_DB.PUBLIC.PROTEIN_SEQUENCE_FUNCTION
+                    WHERE SEQUENCE = '{seq}'""")
+    protein_function = str(df.select(col('FUNCTION')).to_pandas().values)[3:-3]
+  
 
 
 
