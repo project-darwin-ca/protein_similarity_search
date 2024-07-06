@@ -130,7 +130,8 @@ try:
               st.text_area(label = '**Function:**', value = info[2][24:], key = i)
               viz(1, 'white')
         j += 1
-
+except:
+    st.write('Please input an example protein.')
 
 
 
