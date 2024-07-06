@@ -36,6 +36,7 @@ def connection() -> snowflake.connector.SnowflakeConnection:
           'schema': os.getenv('SNOWFLAKE_SCHEMA'),
           'client_session_keep_alive': True
       }
+    
   connection = snowflake.connector.connect(**creds)
   return connection
 
@@ -47,3 +48,9 @@ session = setupsession()
 
 def find_nth(haystack, needle, n):
      parts = haystack.split(needle, n+1)
+     if len(parts)<=n+1:
+         return -1
+     return len(haystack)-len(parts[-1])-len(needle)
+
+# Pull protein information from Uniprot
+def get_desc(id):
