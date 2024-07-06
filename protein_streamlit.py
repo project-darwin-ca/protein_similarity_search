@@ -54,3 +54,21 @@ def find_nth(haystack, needle, n):
 
 # Pull protein information from Uniprot
 def get_desc(id):
+    url1="https://rest.uniprot.org/uniprotkb/' + str(id) + '.json?fields=id,organism_name'
+    data1 = json.loads(requests.get(url1).text)
+    uniprotid = data1['uniProtkbId']
+    orgname = data1['organism'][scientificName']
+    url2="https://rest.uniprot.org/uniprotkb/' + str(id) + '?fields=cc_functions&format=tsv'
+    data2 = requests.get(url2).text
+    fx = data2[:find_nth(data2, ".", 3)+1]
+    return [uniprotid, orgname, fx]
+
+# Visualize the predicted structure saved in PDB file
+
+
+
+
+
+
+
+
