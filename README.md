@@ -1,5 +1,8 @@
-## Protein Similarity Search
+## Tool Schema
 
+![MVP Tool Schema](./assets/Protein_Similarity_Search_Schema_5.png)
+
+## Protein Similarity Search
 
 ![Protein Similarity Search Schema](./assets/Protein_Similarity_Search_Schema.png)
 
