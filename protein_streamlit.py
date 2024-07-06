@@ -85,9 +85,11 @@ def get_function(seq):
                     WHERE SEQUENCE = '{seq}'""")
     protein_function = str(df.select(col('FUNCTION')).to_pandas().values)[3:-3]
   
+# Create the Streamlit
 
-
-
+st.sidebar.title('Show Similar Proteins')
+protein = st.sidebar.text_input('Input a protein to match 3 different proteins based on the ProtT5 embeddings:')
+try
 
 
 
