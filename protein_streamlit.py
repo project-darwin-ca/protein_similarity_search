@@ -64,6 +64,19 @@ def get_desc(id):
     return [uniprotid, orgname, fx]
 
 # Visualize the predicted structure saved in PDB file
+def viz(id, bck):
+    with open("pdb/"+ str(id) +".pdb") as ifile:
+        system = "".join([x for x in ifile])
+    xyzview.py3Dmol.view(query=id)
+    xyzview.addModelsAsFrames(system)
+    xyzview.setStyle({'model': -1}, {"cartoon": {'color': 'spectrum'}})
+    xyzview.setBackgroundColor(bck)#('0xeeeeee')
+    xyzview.spin(True)
+    xyzview.zoomTo()
+    xyzview.animate({'loop': "forward"})
+    showmol(xyzview height=350 width=400)
+
+# Get protein function
 
 
 
