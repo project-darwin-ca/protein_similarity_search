@@ -67,7 +67,7 @@ def get_desc(id):
 def viz(id, bck):
     with open("pdb/"+ str(id) +".pdb") as ifile:
         system = "".join([x for x in ifile])
-    xyzview.py3Dmol.view(query=id)
+    xyzview = py3Dmol.view(query=id)
     xyzview.addModelsAsFrames(system)
     xyzview.setStyle({'model': -1}, {"cartoon": {'color': 'spectrum'}})
     xyzview.setBackgroundColor(bck)#('0xeeeeee')
@@ -80,16 +80,17 @@ def viz(id, bck):
 def get_function(seq):
     df = session.sql(f"""
                     SELECT
-                          FUNCTION
+                        FUNCTION
                     FROM BIONEMO_DB.PUBLIC.PROTEIN_SEQUENCE_FUNCTION
                     WHERE SEQUENCE = '{seq}'""")
     protein_function = str(df.select(col('FUNCTION')).to_pandas().values)[3:-3]
+    return protein_function
   
 # Create the Streamlit
 
 st.sidebar.title('Show Similar Proteins')
 protein = st.sidebar.text_input('Input a protein to match 3 different proteins based on the ProtT5 embeddings:')
-try
+try:
 
 
 
