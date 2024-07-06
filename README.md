@@ -1,5 +1,9 @@
 ## The Outcome: Protein Similarity Search
 
+
+![Protein Similarity Search Schema](./assets/Protein_Similarity_Search_Schema.png)
+
+
 Similarity search was able to extract the structurally/functionally similar proteins.
 
 | Features  | Input Protein  | Similar Protein 1 from Cortex AI | Similar Protein 2 from Cortex AI |
